@@ -1,4 +1,4 @@
-player = document.querySelector('.player');
+const player = document.querySelector('.player');
 const video = document.querySelector('video');
 const progressRange = document.querySelector('.progress-range');
 const progressBar = document.querySelector('.progress-bar');
@@ -137,12 +137,7 @@ let fullscreen = false;
 
 // Toggle Fullscreen
 function toggleFullscreen() {
-  console.log('log')
-  if (!fullscreen) {
-    openFullscreen(player);
-  } else {
-    closeFullscreen();
-  }
+  !fullscreen ? openFullscreen(player) : closeFullscreen();
   fullscreen = !fullscreen;
 }
 
